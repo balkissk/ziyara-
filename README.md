@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="Frontend/src/assets/logo.png" width="230" alt="Ziyara Logo"/>
+
 
 # 🧭 Ziyara Travel – Web Platform for Travel Discovery & Online Reservation  
 
@@ -74,7 +74,7 @@ analyse, conception, architecture, sprints, réalisation et tests.
 ---
 
 # 🤖 AI Recommender System  
-(From your report – Chapter 4, page 31 :contentReference[oaicite:2]{index=2})
+
 
 Ziyara intègre un moteur intelligent basé sur :
 
@@ -97,7 +97,7 @@ Améliore la diversité des recommandations.
 # 🏗 Architecture
 
 ## 🔹 Architecture Logique  
-(basée sur chapitre 2, page 14–16 :contentReference[oaicite:3]{index=3})
+
 
 ### Couches :
 
@@ -110,7 +110,7 @@ Améliore la diversité des recommandations.
 ---
 
 ## 🔹 Architecture Physique  
-(du rapport – page 18–19 :contentReference[oaicite:4]{index=4})
+
 
 <div align="center">
 <img src="docs/architecture-physique.png" width="800">
@@ -126,7 +126,7 @@ Améliore la diversité des recommandations.
 ---
 
 # 📚 SCRUM Methodology  
-(from page 6–7 of the report :contentReference[oaicite:5]{index=5})
+
 
 ### Rôles :
 - Product Owner → Ahmed Neffati  
@@ -158,18 +158,7 @@ Améliore la diversité des recommandations.
 ✔ Profil utilisateur  
 ✔ Recommandation IA  
 
----
 
-# 🖼 Interface Screenshots  
-(Extraits de ton rapport pages 33–35 :contentReference[oaicite:6]{index=6})
-
-| Page d’accueil | Réservation | Avis |
-|----------------|------------|------|
-| <img src="docs/home.png" width="250"/> | <img src="docs/reservation.png" width="250"/> | <img src="docs/reviews.png" width="250"/> |
-
-*(Ajoute les images du projet dans /docs et change les chemins.)*
-
----
 
 # 🛠 Technologies
 
@@ -201,16 +190,5 @@ Améliore la diversité des recommandations.
 
 ---
 
-# 🗂 Directory Structure
-
-
----
-
-# 🚀 Getting Started
-
-## 🔧 Backend
-```bash
-cd Backend
-mvn spring-boot:run
 
 
