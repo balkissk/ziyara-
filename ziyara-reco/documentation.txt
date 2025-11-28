@@ -1,0 +1,46 @@
+Ziyara Reco – Mini Documentation
+
+A small, self-contained content-based recommendations API for voyages.
+Stack: Flask + MySQL + SQLAlchemy + scikit-learn (TF-IDF, cosine) with MMR re-ranking and human-readable reasons.
+
+What it does (in one breath)
+
+Loads voyages from MySQL.
+
+Builds a TF-IDF text vector for each voyage using titre + region + description.
+
+On /similar/<id>, finds the most similar voyages by cosine similarity.
+
+Applies MMR (Maximal Marginal Relevance) to keep results relevant and diverse.
+
+Adds a human-readable reason (same region / shared keywords).
+
+Returns clean UTF-8 JSON.
+
+
+MMR: what it does
+
+Goal: Avoid returning near duplicates.
+
+Score:
+MMR(i) = λ * sim(i, query) - (1 - λ) * max(sim(i, selected_j))
+
+Start with the best by similarity to the target voyage.
+
+Iteratively add items that are still relevant but least similar to what you’ve already picked.
+
+Implementation lives in mmr.py and is called from /similar if there are candidates.
+
+“Reason” field
+
+We generate a short explanation per result:
+
+Same region → "même région (Djerba)"
+
+Keyword overlap → "mots communs: plage, détente"
+
+Internally:
+
+if base.region == other.region → add "même région (...)"
+find common words in description (stopwords removed) → add "mots communs: ..."
+fallback → "thème similaire"
